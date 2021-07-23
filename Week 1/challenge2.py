@@ -23,10 +23,10 @@ def lookandsay(N):
         for y in range (1, len(sequence)): #Iteration through the iterated sequence
             if sequence[y]==sequence[y-1]: #If iteration is found similar, the counter adds up
                 counter+=1
-            else: #Else the counter is used to be concatenated to the new iterated sequence 
+            else: #Else the current counter is used to be concatenated to the new iterated sequence 
                 seq=seq+str(counter)+str(sequence[y-1])
-                counter=1
-        seq=seq+str(counter)+str(sequence[-1])
+                counter=1 #Reset of counter
+        seq=seq+str(counter)+str(sequence[-1]) #Final Concatenation
         sequence=seq
     return sequence 
 
