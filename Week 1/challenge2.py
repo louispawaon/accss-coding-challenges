@@ -1,4 +1,5 @@
 '''
+CHALLENGE 2
 The "look and say" sequence is defined as follows: beginning with the term 1, each subsequent term visually describes the digits appearing in the previous term. The first few terms are as follows:
 
 1
