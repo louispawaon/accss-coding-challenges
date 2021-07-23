@@ -13,7 +13,22 @@ Given an integer N, print the Nth term of this sequence.
 '''
 
 def lookandsay(N):
-    pass
+    sequence="1" #Initialized first iterated sequence
+    if N==1:
+        return sequence #First sequence
+    for x in range(1,N): #Running the sequence n-1 times
+        seq=''
+        counter=1
 
-N=input()
+        for y in range (1, len(sequence)): #Iteration through the iterated sequence
+            if sequence[y]==sequence[y-1]: #If iteration is found similar, the counter adds up
+                counter+=1
+            else: #Else the counter is used to be concatenated to the new iterated sequence 
+                seq=seq+str(counter)+str(sequence[y-1])
+                counter=1
+        seq=seq+str(counter)+str(sequence[-1])
+        sequence=seq
+    return sequence 
+
+N=int(input())
 print(lookandsay(N))
