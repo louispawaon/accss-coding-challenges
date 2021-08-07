@@ -19,8 +19,8 @@ public class challenge1{
     }
     public static void main(String[] args){
         String attempt = "Let's go CS Chameleons!"; //trial string
-        char[] answer = attempt.toCharArray();
-        String finalReveresed=""; //simple conversion of string to character array
+        char[] answer = attempt.toCharArray(); //simple conversion of string to character array
+        String finalReveresed=""; 
         System.out.print(reverse(answer,finalReveresed)); // call reverse method     
     }
 
