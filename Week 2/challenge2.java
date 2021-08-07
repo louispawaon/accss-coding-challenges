@@ -14,7 +14,7 @@ public class challenge2{
 
     static int numberSquares(int x){
         int sum=0; //set sum
-        for (int i=0;i<x+1;i++){ //iterate from x until x+1
+        for (int i=0;i<x+1;i++){ //iterate from 0 until x+1
             sum+=(i*i); //sum all perfect squares given x
         }
         return sum;
