@@ -13,7 +13,7 @@ public class challenge1{
 
     static String reverse(char[] result,String finalAns){
         for (int x=result.length-1;x>=0;x--){
-                finalAns+=result[x]; //reversing the character array using iteration
+                finalAns+=result[x]; //reversing the character array using iteration and appending it to the string
         }
         return finalAns;
     }
