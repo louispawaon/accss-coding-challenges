@@ -11,15 +11,17 @@ reverse("The quick brown fox.") ➞ ".xof nworb kciuq ehT"
 reverse("Let's go CS Chameleons!") ➞ "!snoelemahC SC og s'teL"*/
 public class challenge1{
 
-    static void reverse(char[] result){
+    static String reverse(char[] result,String finalAns){
         for (int x=result.length-1;x>=0;x--){
-            System.out.print(result[x]); //reversing the character array using iteration
+                finalAns+=result[x]; //reversing the character array using iteration
         }
+        return finalAns;
     }
     public static void main(String[] args){
         String attempt = "Let's go CS Chameleons!"; //trial string
-        char[] answer = attempt.toCharArray(); //simple conversion of string to character array
-        reverse(answer); // call reverse method     
+        char[] answer = attempt.toCharArray();
+        String finalReveresed=""; //simple conversion of string to character array
+        System.out.print(reverse(answer,finalReveresed)); // call reverse method     
     }
 
 }
