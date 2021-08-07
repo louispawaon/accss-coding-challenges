@@ -10,7 +10,7 @@
 
     numberSquares(5) ➞ 55*/
 
-public class challenge2 {
+public class challenge2{
 
     static int numberSquares(int x){
         int sum=0; //set sum
