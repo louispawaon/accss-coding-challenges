@@ -22,6 +22,6 @@ public class challenge2{
     }
     public static void main (String[] args){
         int n=4; //trial integer
-        System.out.println(numberSquares(n));
+        System.out.println(numberSquares(n)); //call numberSquares
     }
 }
