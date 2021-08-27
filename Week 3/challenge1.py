@@ -15,3 +15,16 @@ existsHigher([], 5) ➞ false
 notes:
 Return false for an empty array [].
 '''
+def existsHigher(arrNum, n):
+    if arrNum==[]:
+        return False #If arrNum is empty, immediately return false
+    return any(x>=n for x in arrNum) #Use any() function to find that for every x in arrNum, if any x is higher than n, it returns True, otherwise, False
+
+arrNum=[]
+size = int(input("Enter Array Size: ")) #Array Size
+for i in range(0, size):
+    element=int(input()) #Array Element
+    arrNum.append(element) 
+print(arrNum) #Print Array
+n = int(input("Enter n: ")) #Enter Prompt
+print(existsHigher(arrNum, n))
