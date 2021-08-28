@@ -43,4 +43,4 @@ b = int(input("Enter b: "))
 c = int(input("Enter c: "))
 quadraticEquation(a,b,c)
 
-#i could've use cmath library instead of the math library but i opted math because i'm more familiar with it
+#i could've used cmath library instead of the math library but i opted math because i'm more familiar with it
