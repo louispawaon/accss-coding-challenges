@@ -15,3 +15,39 @@ decrypt([ 72, 33, -73, 84, -12, -3, 13, -13, -68 ]) ➞ "Hi there!"
 
 encrypt("Sunshine") ➞ [83, 34, -7, 5, -11, 1, 5, -9]
 '''
+
+def encrypt(message):
+    encryptedArr=[]
+    placeholder=ord(message[0])
+    encryptedArr.append(placeholder)
+    for i in range(0,len(message)-1):
+        placeholder=(ord(message[i+1])-ord(message[i]))
+        encryptedArr.append(placeholder)
+    print(encryptedArr)
+
+def decrypt(decryptArr):
+    decryptedMess = ""
+    firstLetter=chr(decryptArr[0])
+    secondLetterValue=(abs(decryptArr[1])+(decryptArr[0]))
+    secondLetter=chr(secondLetterValue)
+    decryptedMess=firstLetter+secondLetter
+
+    for j in range(2,len(decryptArr)):
+        nextLetters=(secondLetterValue+decryptArr[j])
+        decryptedMess+=chr(nextLetters)
+        secondLetterValue=nextLetters
+    print(decryptedMess)
+
+decryptArr=[]
+choice=input("encrypt or decrypt?: ")
+
+if choice == "encrypt":
+    message=input("Enter message to be encrypted: ")
+    encrypt(message)
+elif choice == "decrypt":
+    size = int(input("Enter decrypt message size: "))
+    for x in range (0, size):
+        message=int(input())
+        decryptArr.append(message)
+    print(decryptArr)
+    decrypt(decryptArr)
