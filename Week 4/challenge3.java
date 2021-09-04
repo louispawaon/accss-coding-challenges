@@ -24,7 +24,7 @@ public class challenge3 {
                 }
                 else{
                     System.out.print(" ");
-                }
+                }  
             }
             System.out.println();
         }
